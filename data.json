@@ -1,0 +1,42 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "image": "https://images.penguinrandomhouse.com/cover/9781400079988",
+      "title": "War & Peace",
+      "author": "Leo Tolstoy",
+      "description": "AAA",
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51SGDS0R38L._AC_SY445_.jpg",
+      "title": "Harry Potter ",
+      "author": "J.K. Rowling",
+      "description": "DENEME",
+      "authorId": "2"
+    },
+    {
+      "id": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Crimeandpunishmentcover.png/200px-Crimeandpunishmentcover.png",
+      "title": "Crime and Punishment ",
+      "author": "Fyodor Dostoyevsky",
+      "description": "Good bookiiii",
+      "authorId": "1"
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Leo Tolstoy"
+    },
+    {
+      "id": 2,
+      "name": "J.K. Rowling"
+    },
+    {
+      "id": 3,
+      "name": "Fyodor Dostoyevsky"
+    }
+  ]
+}

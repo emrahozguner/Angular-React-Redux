@@ -1,0 +1,33 @@
+<form [formGroup]="form">
+  <h3>Book Create</h3>
+
+  <div class="col-sm-9">
+    <div class="row">
+      <label class="col-sm-3">Title: </label>
+      <input type="text" formControlName="title">
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <label class="col-sm-3">Author: </label>
+      <input type="text" formControlName="author">
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <label class="col-sm-3">Description: </label>
+      <input type="text" formControlName="description">
+    </div>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-secondary btn-sm" routerLink="/books">
+      <i class="fa fa-arrow-left"></i> Back
+    </button>
+    <button type="button" class="btn btn-primary btn-sm" (click)="onSaveBook()">
+      <i class="fa fa-save"></i> Save
+    </button>
+    <button type="button" (click)="reset()" class="btn btn-warning btn-sm">
+      <i class="fa fa-undo"></i> Reset
+    </button>  
+  </div>
+</form>

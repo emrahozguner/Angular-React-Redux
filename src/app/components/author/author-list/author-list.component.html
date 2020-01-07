@@ -1,0 +1,37 @@
+
+<div class="row">
+  <div class="col-sm-6">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="col-sm-6 align-bottom">
+    <button class="btn btn-primary pull-right" routerLink="/authors/create">Create new author</button>
+  </div>
+</div>
+<table class="table table-striped" style="text-align: left">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="authorService.authors$ | async as authors">
+    <tr *ngFor="let author of authors">
+      <td>
+        <div class="btn-group">
+          <button routerLink="/authors/detail/{{author.id}}" class="btn btn-secondary btn-sm">
+            <i class="fa fa-search"></i>
+          </button>
+          <button routerLink="/authors/edit/{{author.id}}" class="btn btn-info btn-sm">
+            <i class="fa fa-pencil-square-o"></i>
+          </button>
+          <button (click)="delete(author.id)" class="btn btn-danger btn-sm">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+      </td>
+      <td>{{author.id}}</td>
+      <td>{{author.name}}</td>      
+    </tr>
+  </tbody>
+</table>

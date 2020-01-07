@@ -1,0 +1,37 @@
+<p>
+  book-detail works!
+</p>
+<div *ngIf="book$ | async as book">
+<div class="row">
+  <div class="col-sm-3">
+    <img *ngIf="book.image" src="{{book.image}}" alt="{{book.title}}" width="100px" height="150px"/>
+    <img *ngIf="!book.image" src="assets/images/not-available.png" width="130px" height="100px"/>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">      
+        <label class="col-sm-3">ID: </label>
+        <div class="col-sm-9">{{book.id}}</div>
+      </div>
+      <div class="row">   
+      <label class="col-sm-3">Title:</label>
+      <div class="col-sm-9">{{book.title}}</div>
+    </div>
+    <div class="row">
+      <label class="col-sm-3">Author: </label>
+      <div class="col-sm-9">{{book.author }}</div>
+    </div>
+    <div class="row">
+      <label class="col-sm-3">Description: </label>
+      <div class="col-sm-9">{{book.description}}</div>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary btn-sm" routerLink="/books">
+        <i class="fa fa-arrow-left"></i> Back
+      </button>
+      <!-- <button type="button" (click)="delete(game.id)" class="btn btn-danger btn-sm">
+        <i class="fa fa-times"></i> Delete
+      </button> -->
+    </div>
+  </div>
+</div>
+</div>
